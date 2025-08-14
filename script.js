@@ -46,7 +46,7 @@ var menu=document.getElementById("menu")
 
 exit.addEventListener("click", function () {
     colorMenu.style.display = "none";
-    checkWidth(); // ✅ FIX: run checkWidth instead of hiding menu
+    checkWidth(); 
 });
 
 var colorPicker = document.getElementById("colorpicker");
@@ -74,7 +74,6 @@ menu.addEventListener("click", function () {
     menulist.style.display = "block";
 });
 
-// Change "500" to your desired width
 const breakpoint = 1240; 
 
 function checkWidth() {
@@ -85,9 +84,5 @@ function checkWidth() {
         menu.style.display = "none";
     }
 }
-
-// Run on load
 checkWidth();
-
-// Run when window is resized
 window.addEventListener("resize", checkWidth);

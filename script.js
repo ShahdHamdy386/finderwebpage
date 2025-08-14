@@ -7,8 +7,6 @@ var checkdark = document.querySelector(".checkdark");
 var colorcontrolbutton = document.getElementById("colorcontrolbutton");
 var colorMenu = document.getElementById("colorMenu");
 
-
-
 lighticon.addEventListener("click", function activated(){
     if (thememenu.style.display == "block"){
         thememenu.style.display = "none";
@@ -17,7 +15,6 @@ lighticon.addEventListener("click", function activated(){
         thememenu.style.display = "block";
     }
 })
-
 
 lightmode.addEventListener("click", function () {
     checklight.style.display = "inline";
@@ -44,14 +41,12 @@ colorcontrolbutton.addEventListener("click", function (event) {
     colorMenu.style.display = "block";
 });
 
-
 var exit=document.getElementById("exit")
 var menu=document.getElementById("menu")
 
 exit.addEventListener("click", function () {
     colorMenu.style.display = "none";
-    menu.style.display = "none";
-
+    checkWidth(); // ✅ FIX: run checkWidth instead of hiding menu
 });
 
 var colorPicker = document.getElementById("colorpicker");
@@ -67,7 +62,6 @@ colorPicker.addEventListener("input", function () {
     document.documentElement.style.setProperty("--primarycolor", pickedColor);
 });
 
-
 var menulist=document.getElementById("menulist");
 var exit2=document.getElementById("exit2");
 var menu=document.getElementById("menu");
@@ -79,3 +73,21 @@ exit2.addEventListener("click", function () {
 menu.addEventListener("click", function () {
     menulist.style.display = "block";
 });
+
+// Change "500" to your desired width
+const breakpoint = 1240; 
+
+function checkWidth() {
+    if (window.innerWidth < breakpoint) {
+        menu.style.display = "block";
+    }
+    else {
+        menu.style.display = "none";
+    }
+}
+
+// Run on load
+checkWidth();
+
+// Run when window is resized
+window.addEventListener("resize", checkWidth);

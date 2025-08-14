@@ -86,7 +86,8 @@ nav .icons{
 nav .icons i{
     color: var(--font);
     transition-duration: 1s;
-    padding: 10%;
+    /* padding: 10%; */
+    margin: 20%;
 }
 nav .icons>i:hover{
     transform: scale(1.3);
@@ -100,8 +101,8 @@ nav .icons ul{
     border: 1px solid #eef1f6;
     list-style: none;
     border-radius: 7px;
-    width: 10%;
-    padding: 10px;
+    width: 20%;
+    padding: 0px 30px;
 }
 nav .icons ul li{
     font-size: 15px;
@@ -145,7 +146,7 @@ nav .baritems ul li ul {
     left: 0;
     background-color: var(--background);
     list-style: none;
-    padding: 0;
+    padding: 10px 20px;
     margin: 0;
     border-radius: 7px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -166,13 +167,6 @@ nav .baritems ul li ul li:hover {
     border-radius: 0;
 }
 /* nav end */
-
-
-
-
-
-
-
 
 
 /* color selection start */
@@ -1061,7 +1055,7 @@ header .headerlist ul li:hover{
 }
 .section8 .buttomsection div:hover img{
     transform: scale(1.05);
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
 }
 .section8 .buttomsection div div{
     width: 100%;
